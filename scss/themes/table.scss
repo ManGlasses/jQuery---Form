@@ -1,16 +1,18 @@
-table {
+.table {
     border: 1px solid #87866C;
     border-collapse: collapse;
     width: 50%;
     thead,
     tbody {
         tr {
-            * {
-                padding: 10px;
-            }
             th {
                 border: 1px solid #87866C;
             }
+        }
+    }
+    thead {
+        tr * {
+            padding: 20px 0px;
         }
     }
     tbody {
