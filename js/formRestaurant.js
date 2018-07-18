@@ -10,6 +10,9 @@ function setFormValue(idRestaurant) {
 
     $('#selRestaurantTypeEdit').empty()
     createSelectTypeRestaurant('#selRestaurantTypeEdit')
+    $('#selRestaurantTypeEdit').children()
+        .filter(`[value='${_restaurant.restaurantType}']`)
+        .attr('selected', 'selected')
 
     $('#txtareaRestaurantDetail').val(_restaurant.detail)
 

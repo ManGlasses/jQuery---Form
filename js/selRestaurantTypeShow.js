@@ -1,4 +1,5 @@
 function createSelectTypeRestaurant(selectorId) {
+
     // เอาค่าที่ซ้ำออก
     let checkRestaurant = new Array(dataTblRestaurant.length + 1)
     checkRestaurant.fill(0)
