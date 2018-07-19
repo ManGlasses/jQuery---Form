@@ -7,7 +7,3 @@ function txtRestaurantNameAutoComplete() {
         source: availableRestaurantName
     })
 }
-
-$(function () {
-    txtRestaurantNameAutoComplete()
-})

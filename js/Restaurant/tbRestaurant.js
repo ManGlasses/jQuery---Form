@@ -29,26 +29,3 @@ function deleteRowRestaurant(indexRowRestaurant, idRestaurant) {
     }
 
 }
-
-$(function () {
-    createTableRestaurant(dataTblRestaurant)
-
-    $('#btnAddNewRestaurant').click(function () {
-        let r = confirm('ต้องการเพิ่มข้อมูลหรือไม่')
-        if (r) {
-            dataTblRestaurant.push({
-                id: dataTblRestaurant.length + 1,
-                name: $('#txtRestaurantName').val(),
-                restaurantType: $('#selRestaurantTypeEdit').val(),
-                restaurantTypeName: $('#selRestaurantTypeEdit')
-                    .children(`[value='${$("#selRestaurantTypeEdit").val()}']`)
-                    .text(),
-                detail: $('#txtareaRestaurantDetail').val()
-            })
-
-            alert('เพิ่มข้อมูลเรียบร้อย')
-
-            selectedTypeRestaurant()
-        }
-    })
-})

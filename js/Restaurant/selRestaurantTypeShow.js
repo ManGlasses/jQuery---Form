@@ -45,18 +45,3 @@ function selectedTypeRestaurant() {
         createTableRestaurant(_restaurant)
     }
 }
-
-$(function () {
-
-    createSelectTypeRestaurant('#selRestaurantTypeShow')
-
-    // แสดงค่าใน table ตาม type restaurant ที่เลือก
-    $('#selRestaurantTypeShow').selectmenu({
-
-        // เมื่อค่าเปลี่ยนแปลง ใน select box ของการเลือก type reataurant
-        change: function () {
-            selectedTypeRestaurant()
-        }
-    })
-
-})
