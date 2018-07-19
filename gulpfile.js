@@ -27,5 +27,5 @@ gulp.task('default', ['browser-sync', 'scss'], function () {
   gulp.watch(['index.html'], browserSync.reload)
   gulp.watch(['./css/*.css'], browserSync.reload)
   gulp.watch(['./scss/**/*.scss'], browserSync.reload)
-  gulp.watch(['./js/*.js'], browserSync.reload)
+  gulp.watch(['./js/**/*.js'], browserSync.reload)
 })

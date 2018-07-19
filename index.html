@@ -16,13 +16,23 @@
 
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- json -->
     <script src="json/Practice3Data.js"></script>
-    <script src="js/selRestaurantTypeShow.js"></script>
-    <script src="js/tbRestaurant.js"></script>
+
+    <!-- Restaurant -->
+    <script src="js/Restaurant/selRestaurantTypeShow.js"></script>
+    <script src="js/Restaurant/tbRestaurant.js"></script>
+    <script src="js/Restaurant/formRestaurant.js"></script>
+    <script src="js/Restaurant/txtRestaurantName.js"></script>
+
+    <!-- Menu -->
+    <script src="js/Menu/showMenu.js"></script>
+    <script src="js/Menu/selMenuTypeShow.js"></script>
+    <script src="js/Menu/tbMenu.js"></script>
+    <script src="js/Menu/formMenu.js"></script>
+    <script src="js/Menu/txtMenuName.js"></script>
+
     <script src="js/btnViewMenu.js"></script>
-    <script src="js/formRestaurant.js"></script>
-    <script src="js/txtRestaurantName.js"></script>
-    <script src="js/menu.js"></script>
 
     <title>jQuery-Form</title>
 </head>
@@ -54,17 +64,17 @@
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
-                <tbody id="dataTable"></tbody>
+                <tbody id="dataTableRestaurant"></tbody>
             </table>
         </div>
 
         <div>
-            <input type="button" value="Add New Restaurant">
+            <input id="btnAddNewRestaurant" type="button" value="Add New Restaurant" />
         </div>
 
         <div>
             <label>Name : </label>
-            <input id="txtRestaurantName" type="text">
+            <input id="txtRestaurantName" type="text" />
         </div>
 
         <div>
@@ -75,16 +85,17 @@
         <div>
             <label>Detail : </label>
             <br/>
-            <textarea id="txtareaRestaurantDetail" cols="80" rows="8"></textarea>
+            <textarea id="txtareaRestaurantDetail" cols="70" rows="7"></textarea>
         </div>
 
         <div>
-            <input type="button" value="Save">
-            <input type="button" value="Cancel">
+            <input id="btnSaveRestaurant" type="button" value="Save" />
+            <input id="btnCancelRestaurant" type="button" value="Cancel" />
         </div>
 
     </div>
 
+    <!-- Menu -->
     <div id="menu"></div>
 
 </body>

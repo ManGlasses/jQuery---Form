@@ -1,4 +1,4 @@
-$(function () {
+function txtRestaurantNameAutoComplete() {
     let availableRestaurantName = dataTblRestaurant.map((item) => {
         return item.name
     })
@@ -6,4 +6,8 @@ $(function () {
     $('#txtRestaurantName').autocomplete({
         source: availableRestaurantName
     })
+}
+
+$(function () {
+    txtRestaurantNameAutoComplete()
 })
