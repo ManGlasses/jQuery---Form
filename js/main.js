@@ -1,7 +1,10 @@
 // ใช้ในการ แก้ไข restaurant
 let idEditRestaurant
+let currentIdRestaurant
 
 $(function () {
+
+    currentIdRestaurant = dataTblRestaurant.length
 
     // สร้างตัวเลือกการแสดงของ Restaurant Type
     createSelectTypeRestaurant('#selRestaurantTypeShow')
@@ -20,7 +23,7 @@ $(function () {
     $('#btnAddNewRestaurant').click(function () {
         if (confirm('ต้องการเพิ่มข้อมูลหรือไม่')) {
             dataTblRestaurant.push({
-                id: dataTblRestaurant.length + 1,
+                id: ++currentIdRestaurant,
                 name: $('#txtRestaurantName').val(),
                 restaurantType: $('#selRestaurantTypeEdit').val(),
                 restaurantTypeName: $('#selRestaurantTypeEdit')

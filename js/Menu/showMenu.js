@@ -1,6 +1,9 @@
 let idEditMenu
+let currentIdMenu
 
 function showMenu(idRestaurant) {
+
+    currentIdMenu = dataTblMenu.length
 
     // เก็บค่าที่แถวที่ click ไป
     let _restaurant = dataTblRestaurant.find((item) => {
@@ -111,7 +114,7 @@ function showMenu(idRestaurant) {
 
         if (confirm('ต้องการเพิ่มข้อมูลหรือไม่')) {
             dataTblMenu.push({
-                id: dataTblMenu.length + 1,
+                id: ++currentIdMenu,
                 name: $('#txtMenuName').val(),
                 categoryId: $('#selMenuTypeEdit').val(),
                 categoryName: $('#selMenuTypeEdit')
