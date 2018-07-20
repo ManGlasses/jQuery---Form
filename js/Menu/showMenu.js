@@ -1,3 +1,5 @@
+let idEditMenu
+
 function showMenu(idRestaurant) {
 
     // เก็บค่าที่แถวที่ click ไป
@@ -121,6 +123,7 @@ function showMenu(idRestaurant) {
             alert('เพิ่มข้อมูลเรียบร้อย')
 
             selectedTypeMenu()
+            $('#txtMenuName').txtMenuNameAutoComplete()
         }
     })
 

@@ -1,5 +1,3 @@
-let idEditMenu
-
 function setFormMenu(idMenu) {
 
     // เก็บค่าที่แถวที่ click ไป
@@ -45,7 +43,7 @@ function btnSaveMenu_onClick() {
                 alert('บันทึกข้อมูลเรียบร้อย')
 
                 selectedTypeMenu()
-                // txtRestaurantNameAutoComplete()
+                $('#txtMenuName').txtMenuNameAutoComplete()
             }
         }
     })

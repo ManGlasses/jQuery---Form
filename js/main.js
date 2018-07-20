@@ -31,6 +31,7 @@ $(function () {
             alert('เพิ่มข้อมูลเรียบร้อย')
 
             selectedTypeRestaurant()
+            txtRestaurantNameAutoComplete()
         }
     })
 

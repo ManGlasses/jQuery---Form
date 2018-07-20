@@ -24,15 +24,3 @@ function selectedTypeMenu() {
         createTableMenu(_menu)
     }
 }
-
-// $.fn.onChangeSelectTypeMenu = function () {
-//     $(this).selectmenu({
-
-//         // เมื่อค่าเปลี่ยนแปลง ใน select box ของการเลือก type reataurant
-//         change: () => {
-//             selectedTypeMenu(this)
-//         }
-//     })
-
-//     return $(this)
-// }
