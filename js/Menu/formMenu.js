@@ -24,8 +24,7 @@ function btnSaveMenu_onClick() {
     // Save Menu
     $('#btnSaveMenu').click(function () {
         if (idEditMenu != null) {
-            let r = confirm('ต้องการบันทึกข้อมูลหรือไม่')
-            if (r) {
+            if (confirm('ต้องการบันทึกข้อมูลหรือไม่')) {
                 let _menu = dataTblMenu.find((item) => {
                     return item.id == idEditMenu
                 })

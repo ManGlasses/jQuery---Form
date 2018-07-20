@@ -15,9 +15,7 @@ function createTableRestaurant(data) {
 }
 
 function deleteRowRestaurant(indexRowRestaurant, idRestaurant) {
-
-    let r = confirm('ต้องการลบข้อมูลหรือไม่')
-    if (r) {
+    if (confirm('ต้องการลบข้อมูลหรือไม่')) {
         $(`#btnDeleteRestaurant${indexRowRestaurant}`).parentsUntil('tbody').remove()
 
         let index = dataTblRestaurant.findIndex(item => item.id == idRestaurant)

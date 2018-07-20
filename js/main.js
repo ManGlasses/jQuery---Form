@@ -1,23 +1,24 @@
+// ใช้ในการ แก้ไข restaurant
 let idEditRestaurant
 
 $(function () {
 
+    // สร้างตัวเลือกการแสดงของ Restaurant Type
     createSelectTypeRestaurant('#selRestaurantTypeShow')
 
-    // แสดงค่าใน table ตาม type restaurant ที่เลือก
+    // ผูก event change 
     $('#selRestaurantTypeShow').selectmenu({
-
-        // เมื่อค่าเปลี่ยนแปลง ใน select box ของการเลือก type reataurant
         change: function () {
             selectedTypeRestaurant()
         }
     })
 
+    // สร้างตาราง Restaurant
     createTableRestaurant(dataTblRestaurant)
 
+    // add new restaurant
     $('#btnAddNewRestaurant').click(function () {
-        let r = confirm('ต้องการเพิ่มข้อมูลหรือไม่')
-        if (r) {
+        if (confirm('ต้องการเพิ่มข้อมูลหรือไม่')) {
             dataTblRestaurant.push({
                 id: dataTblRestaurant.length + 1,
                 name: $('#txtRestaurantName').val(),
@@ -35,13 +36,13 @@ $(function () {
         }
     })
 
+    // สร้างตัวเลือกของ Restaurant Type เพื่อแก้ไข
     createSelectTypeRestaurant('#selRestaurantTypeEdit')
 
     // Save Restaurant
     $('#btnSaveRestaurant').click(function () {
         if (idEditRestaurant != null) {
-            let r = confirm('ต้องการบันทึกข้อมูลหรือไม่')
-            if (r) {
+            if (confirm('ต้องการบันทึกข้อมูลหรือไม่')) {
                 let _restaurant = dataTblRestaurant.find((item) => {
                     return item.id == idEditRestaurant
                 })
@@ -70,6 +71,7 @@ $(function () {
         idEditRestaurant = null
     })
 
+    // update ค่าที่ แนะนำการเลือกชื่อ restaurant
     txtRestaurantNameAutoComplete()
 
 })

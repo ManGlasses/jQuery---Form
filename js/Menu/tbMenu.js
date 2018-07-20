@@ -15,8 +15,7 @@ function createTableMenu(data) {
 
 function deleteRowMenu(indexRowMenu, idMenu) {
 
-    let r = confirm('ต้องการลบข้อมูลหรือไม่')
-    if (r) {
+    if (confirm('ต้องการลบข้อมูลหรือไม่')) {
         $(`#btnDeleteMenu${indexRowMenu}`).parentsUntil('tbody').remove()
 
         let index = dataTblMenu.findIndex(item => item.id == idMenu)

@@ -108,8 +108,8 @@ function showMenu(idRestaurant) {
 
     // Add new menu
     $('#btnAddNewMenu').click(function () {
-        let r = confirm('ต้องการเพิ่มข้อมูลหรือไม่')
-        if (r) {
+
+        if (confirm('ต้องการเพิ่มข้อมูลหรือไม่')) {
             dataTblMenu.push({
                 id: dataTblMenu.length + 1,
                 name: $('#txtMenuName').val(),
