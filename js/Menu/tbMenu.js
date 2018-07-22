@@ -22,6 +22,8 @@ function deleteRowMenu(indexRowMenu, idMenu) {
 
         alert('ลบข้อมูลเรียบร้อย')
 
+        idEditMenu = idEditMenu == idMenu ? null : idEditMenu
+
         dataTblMenu.splice(index, 1)
         selectedTypeMenu()
     }

@@ -22,6 +22,8 @@ function deleteRowRestaurant(indexRowRestaurant, idRestaurant) {
 
         alert('ลบข้อมูลเรียบร้อย')
 
+        idEditRestaurant = idEditRestaurant == idRestaurant ? null : idEditRestaurant
+
         dataTblRestaurant.splice(index, 1)
         selectedTypeRestaurant()
     }
